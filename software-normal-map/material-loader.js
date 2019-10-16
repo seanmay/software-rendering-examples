@@ -1,6 +1,6 @@
 import { AssetLoader } from "./asset-loader.js";
 
-const BASE_PATH = "/assets/materials";
+const BASE_PATH = "/software-normal-map/assets/materials";
 
 const setKeyValuePair = (obj, [key, value]) => {
   obj[key] = value;

@@ -5,8 +5,6 @@ import { MaterialLoader } from "./material-loader.js";
 
 
 
-
-
 const run = () => {
   const canvas = document.createElement("canvas");
   const context = canvas.getContext("2d");
@@ -29,7 +27,8 @@ const run = () => {
 
   MaterialLoader.load({ name: "leather-13", features: ["albedo", "normal"] })
     .then(material => {
-      context.drawImage(material.textures.normal, 0, 0);
+      const { albedo: albedoTexture, normal: normalTexture } = material.textures;
+      context.drawImage(albedoTexture, 0, 0);
     });
 };
 
